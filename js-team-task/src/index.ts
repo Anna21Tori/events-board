@@ -1,12 +1,12 @@
 import { getHours, getMinutes } from 'date-fns';
 import { sortBy } from 'lodash';
 
-interface TimeRange {
+export interface TimeRange {
   from: Date;
   to: Date;
 }
 
-interface CollisionItem<T> {
+export interface CollisionItem<T> {
   left: number;
   width: number;
   item: T;
