@@ -106,6 +106,7 @@ function groupByFreeGap<T>(array: T[], getTimeRange: (item: T) => TimeRange): T[
 
 /**
  * Oblicza wartość top i left dla pozycji w tablicy aby nie kolidowały ze sobą.
+ * sortAscending - służy do sortowania wydarzeń względem czasu rozpoczęcia każdego wydarzenia (tak posortowane wydarzenia. lepiej prezentują się w wizualizacji)
  */
 export function resolveTimeCollisions<T>(array: T[], getTimeRange: (item: T) => TimeRange, sortAscending?: (array: T[]) => T[]): CollisionItem<T>[] {
   
