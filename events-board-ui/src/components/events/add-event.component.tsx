@@ -33,7 +33,6 @@ const AddEvent = (props: IAddEventProps) => {
         if(event.id !== "" && event.dateRange[0] != null && event.dateRange[1] != null){
             if(event.dateRange[0].isBefore(event.dateRange[1])){
                 isValid = true;
-                console.log(event.dateRange[0].toString())
             }
         }
         setIsValid(isValid)

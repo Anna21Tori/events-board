@@ -8,10 +8,10 @@ interface IEventProps {
     event: CollisionItem<IEvent>
 }
 interface IItemProps {
-    height: number, 
-    width: number, 
-    top: number, 
-    left: number
+    $height: number, 
+    $width: number, 
+    $top: number, 
+    $left: number
 }
 const computeStyles = (event: CollisionItem<IEvent>) => {
     const {width, left, item} = event;
@@ -22,10 +22,10 @@ const computeStyles = (event: CollisionItem<IEvent>) => {
     const top = dateFrom.hour()*60 + dateFrom.minute();
 
     return {
-        height,
-        width,
-        left,
-        top
+        $height: height,
+        $width: width,
+        $left: left,
+        $top: top
     }
 }
 const Event = (props: IEventProps) => {
@@ -43,11 +43,11 @@ const Event = (props: IEventProps) => {
 }
 
 const Item = styled.div<IItemProps>`
-                width: ${props => props.width*100}%;
-                height: ${props => props.height}px;
+                width: ${props => props.$width*100}%;
+                height: ${props => props.$height}px;
                 position: absolute;
-                left: ${props => props.left*100}%;
-                top:  ${props => props.top}px;
+                left: ${props => props.$left*100}%;
+                top:  ${props => props.$top}px;
                 background: #0d6efd;
                 border-radius: 5px;
                 box-sizing: border-box;

@@ -29,14 +29,12 @@ const useEvents = (defaultEvents: IEvent[]): TUseEvent => {
     useEffect(() => {
         if(events.length > 0){
             const items = resolveTimeCollisions<IEvent>(events, getTimeRange, sortEvents);
-            console.log(items);
             setCollisionItems(items);
         }
-        console.log(collisionItems)
     }, [events])
 
     const addNewEvent = (event: IEvent) => {
-       setEvents(prev => [... prev, event]);
+       setEvents(prev => [...prev, event]);
     }
 
     return [collisionItems, addNewEvent];

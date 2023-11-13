@@ -6,7 +6,7 @@ const Hours = () => {
     const hours = () => {
         const hours = [];
         for (let i = 0; i < 24; i++) {
-            hours.push(<Hour top={i*60 - 5} key={i}>{String(i).padStart(2, '0')}:00</Hour>);
+            hours.push(<Hour $top={i*60 - 5} key={i}>{String(i).padStart(2, '0')}:00</Hour>);
         }
         return hours;
     }
@@ -19,9 +19,9 @@ const Hours = () => {
 }
 export default Hours;
 
-const Hour = styled("span")<{top: number}>`
+const Hour = styled("span")<{$top: number}>`
                         position: absolute;
-                        top: ${props => props.top}px;
+                        top: ${props => props.$top}px;
                         right: 5px;
                         font-size: 10px;
                     `

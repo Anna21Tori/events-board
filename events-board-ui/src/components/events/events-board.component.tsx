@@ -11,7 +11,7 @@ interface IEventsBoardProps{
 const EventsBoard = (props: IEventsBoardProps) => {
     const {events} = props;
     return (
-        <Content $width={95}>
+        <Content $width={90}>
             <HelperLines />
             {
                 events.map((event, i) => <Event event={event} key={i}/>)

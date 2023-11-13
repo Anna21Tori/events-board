@@ -1,7 +1,7 @@
 ## Roadmap
 
-- /js-team-task - include task solution
-- /events-board-ui - include UI for events
+- /js-team-task - includes task solution
+- /events-board-ui - includes UI for events
 
 ## How to run UI
 ```
